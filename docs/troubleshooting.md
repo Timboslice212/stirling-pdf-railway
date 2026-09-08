@@ -10,11 +10,11 @@ Confirm:
 
 - `PORT=8080`
 - `SERVER_PORT=8080`
-- health check path is `/login`
+- health check path is `/api/v1/info/status`
 - health check timeout is at least `600`
 - the service has enough memory for startup
 
-Do not use `/api/v1/info/status` as the default health check without validating it on the selected version.
+If `/api/v1/info/status` stops returning `200` after an upstream upgrade, validate the new version's status endpoint before changing the health check.
 
 ## Login Fails
 
