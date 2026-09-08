@@ -3,7 +3,7 @@
 ## Current Version
 
 ```text
-stirlingtools/stirling-pdf:2.14.3
+docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3
 ```
 
 ## Upgrade Process
