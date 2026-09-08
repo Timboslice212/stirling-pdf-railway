@@ -6,7 +6,7 @@ This repository does not fork or repackage Stirling-PDF source code. It provides
 
 ## What Gets Deployed
 
-- One public Railway service running `stirlingtools/stirling-pdf:2.14.3`
+- One public Railway service running `docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3`
 - One persistent Railway volume mounted at `/configs`
 - Login enabled by default
 - Public HTTPS networking for the web UI and upstream API
@@ -19,10 +19,10 @@ No custom PDF engine, database service, queue, analytics service, or external OC
 Tested target:
 
 ```text
-stirlingtools/stirling-pdf:2.14.3
+docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3
 ```
 
-`2.14.3` is the latest stable upstream release identified during the September 8, 2026 audit. The tag is pinned instead of using `latest` so deploys are repeatable.
+`2.14.3` is the latest stable upstream release identified during the September 8, 2026 audit. The tag is pinned instead of using `latest` so deploys are repeatable. The registry host follows Stirling-PDF's current Docker documentation.
 
 ## Why Railway
 
