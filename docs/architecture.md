@@ -5,7 +5,7 @@
 Use a single Railway service running the official Stirling-PDF Docker image:
 
 ```text
-stirlingtools/stirling-pdf:2.14.3
+docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3
 ```
 
 This is the simplest architecture that matches the current upstream Docker guidance. The standard image includes the main Stirling-PDF feature set, including local PDF processing, OCR support, conversion tooling, authentication, the web UI, and the upstream API.
@@ -22,7 +22,7 @@ This is the simplest architecture that matches the current upstream Docker guida
 
 A separate private LibreOffice/unoserver service adds operational complexity, startup ordering, networking, and failure modes. The current upstream Docker distribution provides conversion functionality in the standard and fat image variants, so this template starts with one service.
 
-If a deployment has high-volume or high-fidelity Office conversion needs, test `stirlingtools/stirling-pdf:2.14.3-fat` first. Add a private conversion worker only if a real Railway validation shows the single-service image is insufficient.
+If a deployment has high-volume or high-fidelity Office conversion needs, test `docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3-fat` first. Add a private conversion worker only if a real Railway validation shows the single-service image is insufficient.
 
 ## Persistence
 
