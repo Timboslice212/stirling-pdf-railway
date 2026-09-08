@@ -15,7 +15,7 @@ This is the simplest architecture that matches the current upstream Docker guida
 - Public service: `stirling-pdf`
 - Docker source: this repository's `Dockerfile`
 - Public HTTPS: enabled
-- Health check: `/login`
+- Health check: `/api/v1/info/status`
 - Persistent volume: mounted at `/configs`
 
 ## Why Not Add Unoserver By Default
