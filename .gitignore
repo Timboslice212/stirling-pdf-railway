@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+AGENTS.md
+sources/
+stirling-data/
+data/
+tmp/
+temp/
+logs/
+*.log
+.DS_Store
+Thumbs.db
