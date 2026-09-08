@@ -10,7 +10,7 @@ This repository does not fork or repackage Stirling-PDF source code. It provides
 - One persistent Railway volume mounted at `/configs`
 - Login enabled by default
 - Public HTTPS networking for the web UI and upstream API
-- Railway startup health check against `/login`
+- Railway startup health check against `/api/v1/info/status`
 
 No custom PDF engine, database service, queue, analytics service, or external OCR/API provider is added.
 
@@ -36,7 +36,7 @@ Configure the Railway service as follows:
 - Builder: Dockerfile
 - Public networking: enabled
 - Port: `8080`
-- Health check path: `/login`
+- Health check path: `/api/v1/info/status`
 - Health check timeout: `600`
 - Volume mount path: `/configs`
 
@@ -83,7 +83,7 @@ After deployment, create and rotate API keys in the Stirling-PDF UI. Treat API k
 
 ## Health Check
 
-This template uses `/login` as the Railway health check path because login is enabled by default and prior upstream discussions indicate `/api/v1/info/status` may be disabled or unsuitable for unauthenticated health checks in v2.
+This template uses `/api/v1/info/status` as the Railway health check path. It was verified on Stirling-PDF `2.14.3` to return `200` with `{"version":"2.14.3","status":"UP"}` without requiring login.
 
 ## Upgrades
 
