@@ -1,4 +1,4 @@
-FROM stirlingtools/stirling-pdf:2.14.3
+FROM docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3
 
 ENV PORT=8080
 ENV SERVER_PORT=8080
