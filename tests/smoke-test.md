@@ -9,7 +9,7 @@ Start the image with a local `/configs` directory and login enabled.
 Expected results:
 
 - Container starts.
-- `GET /login` returns a successful response.
+- `GET /api/v1/info/status` returns `200` and `status: UP`.
 - Login page loads.
 - Admin login works with the configured initial credentials.
 - A simple PDF operation succeeds.
@@ -20,7 +20,7 @@ Expected results:
 Expected results:
 
 - Deployment succeeds.
-- Health check passes against `/login`.
+- Health check passes against `/api/v1/info/status`.
 - Public HTTPS URL loads.
 - Login works.
 - Logs do not contain secret values.
