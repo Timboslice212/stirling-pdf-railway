@@ -38,7 +38,7 @@ English OCR should work with the standard image. Additional languages may need l
 
 ## Office Conversion Problems
 
-The standard image is the default. If DOCX, XLSX, or PPTX conversion quality is not acceptable, test `stirlingtools/stirling-pdf:2.14.3-fat` in staging. Add a private conversion worker only after confirming the single-service image cannot satisfy the workload.
+The standard image is the default. If DOCX, XLSX, or PPTX conversion quality is not acceptable, test `docker.stirlingpdf.com/stirlingtools/stirling-pdf:2.14.3-fat` in staging. Add a private conversion worker only after confirming the single-service image cannot satisfy the workload.
 
 ## Large Files Fail
 
